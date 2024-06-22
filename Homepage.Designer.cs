@@ -48,21 +48,21 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbDisable = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbPending = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbActive = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.gunaChart1 = new Guna.Charts.WinForms.GunaChart();
-            this.gunaAreaDataset1 = new Guna.Charts.WinForms.GunaAreaDataset();
-            this.gunaAreaDataset2 = new Guna.Charts.WinForms.GunaAreaDataset();
-            this.gunaAreaDataset3 = new Guna.Charts.WinForms.GunaAreaDataset();
+            this.chartActive = new Guna.Charts.WinForms.GunaLineDataset();
+            this.ChartPending = new Guna.Charts.WinForms.GunaLineDataset();
+            this.ChartDisable = new Guna.Charts.WinForms.GunaLineDataset();
             this.guna2Panel1.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -96,7 +96,7 @@
             // 
             this.guna2GradientPanel3.BorderRadius = 15;
             this.guna2GradientPanel3.Controls.Add(this.pictureBox3);
-            this.guna2GradientPanel3.Controls.Add(this.label6);
+            this.guna2GradientPanel3.Controls.Add(this.lbDisable);
             this.guna2GradientPanel3.Controls.Add(this.label5);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.Red;
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(3)))), ((int)(((byte)(0)))));
@@ -116,16 +116,16 @@
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             // 
-            // label6
+            // lbDisable
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(91, 68);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 44);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "25";
+            this.lbDisable.AutoSize = true;
+            this.lbDisable.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDisable.ForeColor = System.Drawing.Color.White;
+            this.lbDisable.Location = new System.Drawing.Point(91, 68);
+            this.lbDisable.Name = "lbDisable";
+            this.lbDisable.Size = new System.Drawing.Size(61, 44);
+            this.lbDisable.TabIndex = 0;
+            this.lbDisable.Text = "25";
             // 
             // label5
             // 
@@ -142,7 +142,7 @@
             // 
             this.guna2GradientPanel2.BorderRadius = 15;
             this.guna2GradientPanel2.Controls.Add(this.pictureBox2);
-            this.guna2GradientPanel2.Controls.Add(this.label4);
+            this.guna2GradientPanel2.Controls.Add(this.lbPending);
             this.guna2GradientPanel2.Controls.Add(this.label3);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.Yellow;
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
@@ -162,16 +162,16 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // label4
+            // lbPending
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(83, 70);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 44);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "25";
+            this.lbPending.AutoSize = true;
+            this.lbPending.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPending.ForeColor = System.Drawing.Color.White;
+            this.lbPending.Location = new System.Drawing.Point(83, 70);
+            this.lbPending.Name = "lbPending";
+            this.lbPending.Size = new System.Drawing.Size(61, 44);
+            this.lbPending.TabIndex = 0;
+            this.lbPending.Text = "25";
             // 
             // label3
             // 
@@ -188,7 +188,7 @@
             // 
             this.guna2GradientPanel1.BorderRadius = 15;
             this.guna2GradientPanel1.Controls.Add(this.pictureBox1);
-            this.guna2GradientPanel1.Controls.Add(this.label2);
+            this.guna2GradientPanel1.Controls.Add(this.lbActive);
             this.guna2GradientPanel1.Controls.Add(this.label1);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(116)))), ((int)(((byte)(2)))));
@@ -208,16 +208,16 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // lbActive
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(84, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 44);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "25";
+            this.lbActive.AutoSize = true;
+            this.lbActive.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbActive.ForeColor = System.Drawing.Color.White;
+            this.lbActive.Location = new System.Drawing.Point(84, 70);
+            this.lbActive.Name = "lbActive";
+            this.lbActive.Size = new System.Drawing.Size(61, 44);
+            this.lbActive.TabIndex = 0;
+            this.lbActive.Text = "25";
             // 
             // label1
             // 
@@ -242,16 +242,16 @@
             // 
             // gunaChart1
             // 
-            this.gunaChart1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaChart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(61)))));
             this.gunaChart1.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] {
-            this.gunaAreaDataset1,
-            this.gunaAreaDataset2,
-            this.gunaAreaDataset3});
+            this.chartActive,
+            this.ChartPending,
+            this.ChartDisable});
             chartFont1.FontName = "Arial";
             this.gunaChart1.Legend.LabelFont = chartFont1;
             this.gunaChart1.Location = new System.Drawing.Point(0, 0);
             this.gunaChart1.Name = "gunaChart1";
-            this.gunaChart1.Size = new System.Drawing.Size(721, 339);
+            this.gunaChart1.Size = new System.Drawing.Size(839, 342);
             this.gunaChart1.TabIndex = 0;
             chartFont2.FontName = "Arial";
             chartFont2.Size = 12;
@@ -279,29 +279,29 @@
             tick3.Font = chartFont8;
             this.gunaChart1.ZAxes.Ticks = tick3;
             // 
-            // gunaAreaDataset1
+            // chartActive
             // 
-            this.gunaAreaDataset1.BorderColor = System.Drawing.Color.Empty;
-            this.gunaAreaDataset1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(158)))), ((int)(((byte)(1)))));
-            this.gunaAreaDataset1.IndexLabelForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(158)))), ((int)(((byte)(1)))));
-            this.gunaAreaDataset1.Label = "Active";
-            this.gunaAreaDataset1.TargetChart = this.gunaChart1;
+            this.chartActive.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(145)))), ((int)(((byte)(1)))));
+            this.chartActive.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(145)))), ((int)(((byte)(1)))));
+            this.chartActive.IndexLabelForeColor = System.Drawing.Color.White;
+            this.chartActive.Label = "Active";
+            this.chartActive.TargetChart = this.gunaChart1;
             // 
-            // gunaAreaDataset2
+            // ChartPending
             // 
-            this.gunaAreaDataset2.BorderColor = System.Drawing.Color.Empty;
-            this.gunaAreaDataset2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.gunaAreaDataset2.IndexLabelForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.gunaAreaDataset2.Label = "Pending";
-            this.gunaAreaDataset2.TargetChart = this.gunaChart1;
+            this.ChartPending.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(0)))));
+            this.ChartPending.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(0)))));
+            this.ChartPending.IndexLabelForeColor = System.Drawing.Color.White;
+            this.ChartPending.Label = "Disable";
+            this.ChartPending.TargetChart = this.gunaChart1;
             // 
-            // gunaAreaDataset3
+            // ChartDisable
             // 
-            this.gunaAreaDataset3.BorderColor = System.Drawing.Color.Empty;
-            this.gunaAreaDataset3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(5)))), ((int)(((byte)(0)))));
-            this.gunaAreaDataset3.IndexLabelForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(5)))), ((int)(((byte)(0)))));
-            this.gunaAreaDataset3.Label = "Drop Out";
-            this.gunaAreaDataset3.TargetChart = this.gunaChart1;
+            this.ChartDisable.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ChartDisable.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ChartDisable.IndexLabelForeColor = System.Drawing.Color.White;
+            this.ChartDisable.Label = "Disable";
+            this.ChartDisable.TargetChart = this.gunaChart1;
             // 
             // Homepage
             // 
@@ -339,16 +339,16 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbActive;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbDisable;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbPending;
         private System.Windows.Forms.Label label3;
-        private Guna.Charts.WinForms.GunaAreaDataset gunaAreaDataset1;
-        private Guna.Charts.WinForms.GunaAreaDataset gunaAreaDataset2;
-        private Guna.Charts.WinForms.GunaAreaDataset gunaAreaDataset3;
+        private Guna.Charts.WinForms.GunaLineDataset chartActive;
+        private Guna.Charts.WinForms.GunaLineDataset ChartPending;
+        private Guna.Charts.WinForms.GunaLineDataset ChartDisable;
     }
 }
