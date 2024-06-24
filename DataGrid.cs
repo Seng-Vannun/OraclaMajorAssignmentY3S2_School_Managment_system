@@ -12,12 +12,13 @@ namespace OraclaMajorAssignmentY3S2
 {
     public partial class DataGrid : Form
     {
+        Controller.myclass.StudentController _student = new Controller.myclass.StudentController();
         public DataGrid()
         {
             InitializeComponent();
             
         }
-        Controller.myclass.StudentController _student = new Controller.myclass.StudentController();
+      
         private void DataGrid_Load(object sender, EventArgs e)
         {
             fillDataGrid();

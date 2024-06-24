@@ -50,7 +50,7 @@ namespace OraclaMajorAssignmentY3S2
             if (HoverButton != "report")
             {
                 unHoverBtn(HoverButton);
-                //  container(new Dashboard());
+                container(new Report());
                 menuStrip('3');
                 HoverButton = "report";
             }
