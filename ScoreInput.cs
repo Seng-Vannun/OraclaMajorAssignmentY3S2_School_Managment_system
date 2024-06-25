@@ -93,66 +93,72 @@ namespace OraclaMajorAssignmentY3S2
         }
         public void CheckIfStudentHaveScore(int id)
         {
-           
-            _score.PullScore(id);
-            int score_id = 0;
-            foreach (DataRow r in _score.dt.Rows) 
-            { 
-                score_id = int.Parse(r["Score_id"].ToString());
-                if (score_id != 0)
-                {
-                    break;
-                }
-            }
-            
-            if (score_id==0)
+            try
             {
-                foreach (var subject in ScoresBySubject)
+                _score.PullScore(id);
+                int score_id = 0;
+                foreach (DataRow r in _score.dt.Rows)
                 {
-                    foreach (var year in subject.Value.Keys)
+                    score_id = int.Parse(r["Score_id"].ToString());
+                    if (score_id != 0)
                     {
-                        for (int semester = 1; semester <= 2; semester++)
+                        break;
+                    }
+                }
+
+                if (score_id == 0)
+                {
+                    foreach (var subject in ScoresBySubject)
+                    {
+                        foreach (var year in subject.Value.Keys)
                         {
-                            _score.Subject_id = subject.Key;
-                            _score.Year = year;
-                            _score.Semester = semester;
-                            _score.Score = 0;
-                            _score.InsertScore(id); // Consider batching these inserts if possible
+                            for (int semester = 1; semester <= 2; semester++)
+                            {
+                                _score.Subject_id = subject.Key;
+                                _score.Year = year;
+                                _score.Semester = semester;
+                                _score.Score = 0;
+                                _score.InsertScore(id); // Consider batching these inserts if possible
+                            }
                         }
                     }
                 }
-            }
-            else
-            {
-                foreach (DataRow r in _score.dt.Rows)
+                else
                 {
-                    int year = int.Parse(r["year"].ToString());
-                    int semester = int.Parse(r["SEMESTER"].ToString());
-                    int subject_id = int.Parse(r["subject_id"].ToString());
-                    double score = double.Parse(r["score"].ToString());
-
-                    if (ScoresBySubject.ContainsKey(subject_id) && ScoresBySubject[subject_id].ContainsKey(year))
+                    foreach (DataRow r in _score.dt.Rows)
                     {
-                        var currentScores = ScoresBySubject[subject_id][year];
-                        if (semester == 1)
-                            ScoresBySubject[subject_id][year] = (score, currentScores.Item2);
-                        else
-                            ScoresBySubject[subject_id][year] = (currentScores.Item1, score);
-                    }
-                }
+                        int year = int.Parse(r["year"].ToString());
+                        int semester = int.Parse(r["SEMESTER"].ToString());
+                        int subject_id = int.Parse(r["subject_id"].ToString());
+                        double score = double.Parse(r["score"].ToString());
 
+                        if (ScoresBySubject.ContainsKey(subject_id) && ScoresBySubject[subject_id].ContainsKey(year))
+                        {
+                            var currentScores = ScoresBySubject[subject_id][year];
+                            if (semester == 1)
+                                ScoresBySubject[subject_id][year] = (score, currentScores.Item2);
+                            else
+                                ScoresBySubject[subject_id][year] = (currentScores.Item1, score);
+                        }
+                    }
+
+                }
+                int selectedSubject = 1;
+                guna2DataGridView1.Rows.Clear();
+                // Populate DataGridView with years, semesters, and scores for the selected subject
+                foreach (var entry in ScoresBySubject[selectedSubject])
+                {
+                    var year = entry.Key;
+                    var scores = entry.Value;
+                    // Adding rows to DataGridView: Year, Semester, Score
+                    guna2DataGridView1.Rows.Add(year, scores.Semester1, scores.Semester2);
+                }
+                checkComboxbox = true;
             }
-            int selectedSubject = 1;
-            guna2DataGridView1.Rows.Clear();
-            // Populate DataGridView with years, semesters, and scores for the selected subject
-            foreach (var entry in ScoresBySubject[selectedSubject])
+            catch (Exception ex)
             {
-                var year = entry.Key;
-                var scores = entry.Value;
-                // Adding rows to DataGridView: Year, Semester, Score
-                guna2DataGridView1.Rows.Add(year, scores.Semester1, scores.Semester2);
+                MessageBox.Show("Error during update: " + ex.Message);
             }
-            checkComboxbox = true;
         }
         private void btnCancelStudentTab_Click(object sender, EventArgs e)
         {
@@ -161,7 +167,29 @@ namespace OraclaMajorAssignmentY3S2
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                foreach (var subjectEntry in ScoresBySubject)
+                {
+                    int subjectId = subjectEntry.Key;
+                    foreach (var yearEntry in subjectEntry.Value)
+                    {
+                        int year = yearEntry.Key;
+                        (double scoreSem1, double scoreSem2) = yearEntry.Value;
+                        _score.Subject_id = subjectId;
+                        _score.Year = year;
+                        // Update for Semester 1
+                        _score.UpdateData(id,1, scoreSem1);
+                        // Update for Semester 2
+                        _score.UpdateData(id, 2, scoreSem2);
+                    }
+                }
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+               MessageBox.Show("Error during update: " + ex.Message);
+            }
         }
     }
 }

@@ -39,7 +39,6 @@ namespace OraclaMajorAssignmentY3S2
                     dgStudent.Rows[i].Cells[1].Value = Image.FromFile("Photos//man.png");
                 }
                 dgStudent.Rows[i].Cells[2].Value = first_name + " " + last_name;
-                name = first_name+" "+last_name;
             }
         }
 
@@ -63,6 +62,7 @@ namespace OraclaMajorAssignmentY3S2
             if (dgStudent.SelectedRows.Count > 0)
             {
                 id = int.Parse(dgStudent.SelectedRows[0].Cells[0].Value + string.Empty);
+                name = dgStudent.SelectedRows[0].Cells[2].Value.ToString();
                 return id;
             }
             return id;

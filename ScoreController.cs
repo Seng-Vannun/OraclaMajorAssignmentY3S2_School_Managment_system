@@ -61,17 +61,17 @@ namespace OraclaMajorAssignmentY3S2.Controller.myclass
             cmd.Parameters.Add("p_subject_desc", OracleDbType.Varchar2).Value = "Advanced Calculus";
             cmd.ExecuteNonQuery();
         }
-        public void UpdateData(int id)
+        public void UpdateData(int id,int semester,double score)
         {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "UpdateStudent";
+            cmd.CommandText = "UpdateScore";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("p_student_id", OracleDbType.Int32).Value = id;
             cmd.Parameters.Add("p_subject_id", OracleDbType.Int32).Value = Subject_id;
             cmd.Parameters.Add("p_year", OracleDbType.Int32).Value = Year;
-            cmd.Parameters.Add("p_semester", OracleDbType.Int32).Value = Semester;
-            cmd.Parameters.Add("p_score", OracleDbType.Int32).Value = Score;
+            cmd.Parameters.Add("p_semester", OracleDbType.Int32).Value = semester;
+            cmd.Parameters.Add("p_score", OracleDbType.Double).Value = score;
             cmd.ExecuteNonQuery();
         }
     }
