@@ -30,6 +30,7 @@ namespace OraclaMajorAssignmentY3S2
             InitializeComponent();
             FillComboBox();
             this.id = id;
+            lbId.Text = id.ToString();
         }
         private void Edit_Load(object sender, EventArgs e)
         {
@@ -158,7 +159,8 @@ namespace OraclaMajorAssignmentY3S2
                     _background.Current_Address = tbAddress.Text.ToString();
                     _student.UpdateData(this.id);
                     _background.UpdateData(this.id);
-                    MessageBox.Show("Good","Good", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
+                this.DialogResult = DialogResult.OK;
                 this.Close();
                 }
 

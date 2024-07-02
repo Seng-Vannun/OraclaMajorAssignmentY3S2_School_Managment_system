@@ -113,8 +113,8 @@ namespace OraclaMajorAssignmentY3S2
                     _backgroundController.Current_Address = tbAddress.Text.ToString();
                     int id =_studentController.InsertData();
                     _backgroundController.InsertData(id);
-                    MessageBox.Show("Good","Good", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
                 }
 
             }catch(Exception ex)

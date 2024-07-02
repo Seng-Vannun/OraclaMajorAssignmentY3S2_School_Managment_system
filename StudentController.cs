@@ -106,7 +106,6 @@ namespace OraclaMajorAssignmentY3S2.Controller.myclass
         }
         public Image ConvertToImg(object _Blob)
         {
-
             if (_Blob is DBNull)
             {
                 return null;

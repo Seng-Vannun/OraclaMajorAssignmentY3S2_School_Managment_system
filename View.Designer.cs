@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbFullname = new System.Windows.Forms.Label();
@@ -61,10 +60,12 @@
             this.lbId = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbStatus = new System.Windows.Forms.Label();
+            this.btnQr = new Guna.UI2.WinForms.Guna2Button();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -81,16 +82,6 @@
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this.guna2Panel1;
             this.guna2DragControl1.UseTransparentDrag = true;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 90);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(183, 221);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 1;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -444,6 +435,35 @@
             this.lbStatus.TabIndex = 5;
             this.lbStatus.Text = "PlaceHolder";
             // 
+            // btnQr
+            // 
+            this.btnQr.Animated = true;
+            this.btnQr.AnimatedGIF = true;
+            this.btnQr.BackColor = System.Drawing.Color.Transparent;
+            this.btnQr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnQr.BorderRadius = 12;
+            this.btnQr.BorderThickness = 1;
+            this.btnQr.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnQr.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnQr.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnQr.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnQr.FillColor = System.Drawing.Color.Transparent;
+            this.btnQr.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnQr.ForeColor = System.Drawing.Color.Black;
+            this.btnQr.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(239)))), ((int)(((byte)(209)))));
+            this.btnQr.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(239)))), ((int)(((byte)(209)))));
+            this.btnQr.HoverState.Image = global::OraclaMajorAssignmentY3S2.Properties.Resources.qr_code_scan;
+            this.btnQr.Image = global::OraclaMajorAssignmentY3S2.Properties.Resources.qr_code_scan__1_;
+            this.btnQr.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnQr.Location = new System.Drawing.Point(371, 528);
+            this.btnQr.Name = "btnQr";
+            this.btnQr.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(239)))), ((int)(((byte)(209)))));
+            this.btnQr.Size = new System.Drawing.Size(161, 39);
+            this.btnQr.TabIndex = 7;
+            this.btnQr.Text = "Show QRcode";
+            this.btnQr.UseTransparentBackground = true;
+            this.btnQr.Click += new System.EventHandler(this.btnQr_Click);
+            // 
             // btnBack
             // 
             this.btnBack.Animated = true;
@@ -473,11 +493,22 @@
             this.btnBack.UseTransparentBackground = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 90);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(183, 221);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 1;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(538, 568);
+            this.Controls.Add(this.btnQr);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lbStatus);
             this.Controls.Add(this.lbId);
@@ -492,11 +523,11 @@
             this.Name = "View";
             this.Text = "View";
             this.Load += new System.EventHandler(this.View_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -536,5 +567,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbStatus;
         private Guna.UI2.WinForms.Guna2Button btnBack;
+        private Guna.UI2.WinForms.Guna2Button btnQr;
     }
 }

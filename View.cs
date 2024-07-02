@@ -103,5 +103,11 @@ namespace OraclaMajorAssignmentY3S2
             }
             return "Error";
         }
+
+        private void btnQr_Click(object sender, EventArgs e)
+        {
+            var qr = new QrCode(id);
+            qr.ShowDialog();
+        }
     }
 }

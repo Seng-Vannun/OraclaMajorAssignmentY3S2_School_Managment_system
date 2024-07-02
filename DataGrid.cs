@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Tulpep.NotificationWindow;
 namespace OraclaMajorAssignmentY3S2
 {
     public partial class DataGrid : Form
@@ -55,8 +55,20 @@ namespace OraclaMajorAssignmentY3S2
             }
             else
             {
-                var Edit = new Edit(id);
-                Edit.ShowDialog();
+                using (var Edit = new Edit(id))
+                {
+                    ;
+                    if (Edit.ShowDialog() == DialogResult.OK)
+                    {
+                        var popupNotifier = new PopupNotifier();
+
+                        // Set the content and title of the notification
+                        popupNotifier.TitleText = "Notification Title";
+                        popupNotifier.ContentText = "This is the content of the notification.";
+                        guna2MessageDialog1.Text = "Good";
+                        guna2MessageDialog1.Show();
+                    }
+                }
                 dgStudent.Rows.Clear();
                 dgStudent.Refresh();
                 fillDataGrid();
@@ -128,6 +140,9 @@ namespace OraclaMajorAssignmentY3S2
                 return id;
         }
 
-       
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     } 
 }

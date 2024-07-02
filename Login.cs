@@ -30,21 +30,26 @@ namespace OraclaMajorAssignmentY3S2
                     if(result == "1") 
                     {
                         var dash = new Dashboard();
+                        dash.FormClosed += new FormClosedEventHandler(dash_FormClosed);
                         dash.Show();
                         this.Hide();
                     }
                     else
                     {
-                        MessageBox.Show("also no");
+                        MessageBox.Show("Incorrect Login Information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     }
                 }
-                else { MessageBox.Show("no"); }
+                else { MessageBox.Show("Missing Information","Missing",MessageBoxButtons.OK,MessageBoxIcon.Stop); }
                
             }
             catch (Exception ex) 
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        private void dash_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
