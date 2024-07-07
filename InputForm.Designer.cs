@@ -665,10 +665,10 @@
             this.familyTab.Controls.Add(this.btnCancelFamilyTab);
             this.familyTab.Controls.Add(this.btnInsert);
             this.familyTab.Controls.Add(this.btnBack);
-            this.familyTab.Location = new System.Drawing.Point(184, 4);
+            this.familyTab.Location = new System.Drawing.Point(5, 4);
             this.familyTab.Name = "familyTab";
             this.familyTab.Padding = new System.Windows.Forms.Padding(3);
-            this.familyTab.Size = new System.Drawing.Size(533, 498);
+            this.familyTab.Size = new System.Drawing.Size(712, 498);
             this.familyTab.TabIndex = 2;
             this.familyTab.Text = "Family BG";
             this.familyTab.UseVisualStyleBackColor = true;
@@ -1265,6 +1265,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Name = "InputForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "zz";
             this.InputTabControll.ResumeLayout(false);
             this.StudentTab.ResumeLayout(false);

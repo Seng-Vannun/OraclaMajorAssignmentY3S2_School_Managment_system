@@ -32,7 +32,7 @@ namespace OraclaMajorAssignmentY3S2
                 }
 
             };
-            Bitmap qrImg = qrcode.Write("http://172.16.6.127:7265/api/Student/" + id.ToString());
+            Bitmap qrImg = qrcode.Write("http://192.168.1.102:7265/api/Student/" + id.ToString());
             guna2PictureBox1.Image = qrImg;
         }
     }

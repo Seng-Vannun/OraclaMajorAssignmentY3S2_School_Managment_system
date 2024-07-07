@@ -29,7 +29,7 @@ namespace OraclaMajorAssignmentY3S2
                     var result = user.login(username,password);
                     if(result == "1") 
                     {
-                        var dash = new Dashboard();
+                        var dash = new Dashboard(username);
                         dash.FormClosed += new FormClosedEventHandler(dash_FormClosed);
                         dash.Show();
                         this.Hide();

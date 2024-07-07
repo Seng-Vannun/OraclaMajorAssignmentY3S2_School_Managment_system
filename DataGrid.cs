@@ -60,13 +60,7 @@ namespace OraclaMajorAssignmentY3S2
                     ;
                     if (Edit.ShowDialog() == DialogResult.OK)
                     {
-                        var popupNotifier = new PopupNotifier();
-
-                        // Set the content and title of the notification
-                        popupNotifier.TitleText = "Notification Title";
-                        popupNotifier.ContentText = "This is the content of the notification.";
-                        guna2MessageDialog1.Text = "Good";
-                        guna2MessageDialog1.Show();
+                        MessageBox.Show("Good", "Good", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 dgStudent.Rows.Clear();

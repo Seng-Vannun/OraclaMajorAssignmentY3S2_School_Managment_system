@@ -25,6 +25,7 @@ namespace OraclaMajorAssignmentY3S2
         {
             InitializeComponent();
             FillComboBox();
+            guna2PictureBox1.Image = System.Drawing.Image.FromFile("Photos//man.png");
 
         }
         private void btnNext_Click(object sender, EventArgs e)
@@ -97,6 +98,7 @@ namespace OraclaMajorAssignmentY3S2
                 bool _validate = ValidateTextboxes();
                 if (_validate)
                 {
+
                     byte[] img = ConvertToBLOB(guna2PictureBox1.Image);
                     _studentController.FirstName = tbFirstname.Text.ToString();
                     _studentController.LastName = tbLastname.Text.ToString();

@@ -1323,6 +1323,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Name = "Edit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "zz";
             this.Load += new System.EventHandler(this.Edit_Load);
             this.InputTabControll.ResumeLayout(false);

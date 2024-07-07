@@ -37,20 +37,17 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.lbDashTilte = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.btnreport = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.HomepageMenuButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbUsername = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.ContainerPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDashTilte)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,14 +126,12 @@
             // 
             // guna2GradientPanel1
             // 
-            this.guna2GradientPanel1.Controls.Add(this.guna2Button4);
             this.guna2GradientPanel1.Controls.Add(this.btnreport);
             this.guna2GradientPanel1.Controls.Add(this.btnDashboard);
             this.guna2GradientPanel1.Controls.Add(this.HomepageMenuButton);
             this.guna2GradientPanel1.Controls.Add(this.guna2GradientButton1);
-            this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel3);
+            this.guna2GradientPanel1.Controls.Add(this.lbUsername);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel2);
-            this.guna2GradientPanel1.Controls.Add(this.guna2CirclePictureBox3);
             this.guna2GradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(61)))), ((int)(((byte)(129)))));
@@ -146,29 +141,6 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(200, 674);
             this.guna2GradientPanel1.TabIndex = 0;
-            // 
-            // guna2Button4
-            // 
-            this.guna2Button4.Animated = true;
-            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(85)))), ((int)(((byte)(171)))));
-            this.guna2Button4.FocusedColor = System.Drawing.Color.RosyBrown;
-            this.guna2Button4.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.guna2Button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(32)))));
-            this.guna2Button4.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(16)))), ((int)(((byte)(36)))));
-            this.guna2Button4.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(133)))), ((int)(((byte)(236)))));
-            this.guna2Button4.Location = new System.Drawing.Point(-8, 285);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(116)))), ((int)(((byte)(214)))));
-            this.guna2Button4.PressedDepth = 40;
-            this.guna2Button4.Size = new System.Drawing.Size(222, 47);
-            this.guna2Button4.TabIndex = 6;
-            this.guna2Button4.Text = "Homepage";
-            this.guna2Button4.UseTransparentBackground = true;
             // 
             // btnreport
             // 
@@ -273,16 +245,16 @@
             this.guna2GradientButton1.Text = "Logout";
             this.guna2GradientButton1.UseTransparentBackground = true;
             // 
-            // guna2HtmlLabel3
+            // lbUsername
             // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(52, 544);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(88, 20);
-            this.guna2HtmlLabel3.TabIndex = 3;
-            this.guna2HtmlLabel3.Text = "Username";
+            this.lbUsername.BackColor = System.Drawing.Color.Transparent;
+            this.lbUsername.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsername.ForeColor = System.Drawing.Color.White;
+            this.lbUsername.Location = new System.Drawing.Point(44, 571);
+            this.lbUsername.Name = "lbUsername";
+            this.lbUsername.Size = new System.Drawing.Size(88, 20);
+            this.lbUsername.TabIndex = 3;
+            this.lbUsername.Text = "Username";
             // 
             // guna2HtmlLabel2
             // 
@@ -294,20 +266,6 @@
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(160, 20);
             this.guna2HtmlLabel2.TabIndex = 3;
             this.guna2HtmlLabel2.Text = "School Managment";
-            // 
-            // guna2CirclePictureBox3
-            // 
-            this.guna2CirclePictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox3.Image = global::OraclaMajorAssignmentY3S2.Properties.Resources.Screenshot_2024_06_04_small;
-            this.guna2CirclePictureBox3.ImageRotate = 0F;
-            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(56, 451);
-            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
-            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(76, 76);
-            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.guna2CirclePictureBox3.TabIndex = 2;
-            this.guna2CirclePictureBox3.TabStop = false;
-            this.guna2CirclePictureBox3.UseTransparentBackground = true;
             // 
             // guna2CirclePictureBox1
             // 
@@ -348,7 +306,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbDashTilte)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -365,11 +322,9 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2Button HomepageMenuButton;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button btnreport;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbUsername;
         private System.Windows.Forms.PictureBox pbDashTilte;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbDashTilte;
         private Guna.UI2.WinForms.Guna2Panel ContainerPanel;

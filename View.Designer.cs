@@ -521,6 +521,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "View";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "View";
             this.Load += new System.EventHandler(this.View_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

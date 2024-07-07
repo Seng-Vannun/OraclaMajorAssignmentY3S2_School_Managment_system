@@ -14,9 +14,10 @@ namespace OraclaMajorAssignmentY3S2
     public partial class Dashboard : Form
     {
         protected string HoverButton;
-        public Dashboard()
+        public Dashboard(string username)
         {
             InitializeComponent();
+            lbUsername.Text = username;
         }
         private void Dashboard_Load(object sender, EventArgs e)
         {
